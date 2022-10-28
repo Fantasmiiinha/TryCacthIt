@@ -16,7 +16,7 @@ namespace TryCatchIt
         int points;
         int speed;
         int teste;
-        float posicao;
+        int teste2;
 
         Random rnd = new Random();
 
