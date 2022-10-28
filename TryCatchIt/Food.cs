@@ -15,6 +15,9 @@ namespace TryCatchIt
         int width = 20;
         int points;
         int speed;
+        int teste;
+        float posicao;
+
         Random rnd = new Random();
 
         public Food(Control pb)
