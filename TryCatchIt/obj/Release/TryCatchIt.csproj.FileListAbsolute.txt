@@ -1,0 +1,5 @@
+E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Release\TryCatchIt.csproj.AssemblyReference.cache
+E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Release\TryCatchIt.Frm_Main.resources
+E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Release\TryCatchIt.Properties.Resources.resources
+E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Release\TryCatchIt.csproj.GenerateResource.cache
+E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Release\TryCatchIt.csproj.CoreCompileInputs.cache
