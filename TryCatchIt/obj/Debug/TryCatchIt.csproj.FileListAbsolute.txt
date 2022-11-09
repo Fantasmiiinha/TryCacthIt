@@ -18,6 +18,16 @@ E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt
 E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.CoreCompileInputs.cache
 E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.exe
 E:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.pdb
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe.config
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.pdb
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.AssemblyReference.cache
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.Frm_Main.resources
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.Properties.Resources.resources
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.GenerateResource.cache
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.CoreCompileInputs.cache
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.exe
+D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.pdb
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe.config
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.pdb

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Background = new System.Windows.Forms.PictureBox();
+            this.BackgroundImg = new System.Windows.Forms.PictureBox();
             this.imgPlayer = new System.Windows.Forms.PictureBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.txtScore = new System.Windows.Forms.Label();
@@ -65,7 +65,14 @@
             this.imgFood25 = new System.Windows.Forms.PictureBox();
             this.imgFood26 = new System.Windows.Forms.PictureBox();
             this.imgFood27 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
+            this.pbxHeigthRnd = new System.Windows.Forms.PictureBox();
+            this.txtLost = new System.Windows.Forms.Label();
+            this.pn1 = new System.Windows.Forms.Panel();
+            this.pn2 = new System.Windows.Forms.Panel();
+            this.pn3 = new System.Windows.Forms.Panel();
+            this.stopWatch = new System.Windows.Forms.Timer(this.components);
+            this.txtTime = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.BackgroundImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLife1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLife2)).BeginInit();
@@ -97,28 +104,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgFood25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFood26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFood27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxHeigthRnd)).BeginInit();
             this.SuspendLayout();
             // 
-            // Background
+            // BackgroundImg
             // 
-            this.Background.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Background.Location = new System.Drawing.Point(0, 0);
-            this.Background.Name = "Background";
-            this.Background.Size = new System.Drawing.Size(591, 524);
-            this.Background.TabIndex = 0;
-            this.Background.TabStop = false;
+            this.BackgroundImg.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImg.Location = new System.Drawing.Point(2, 0);
+            this.BackgroundImg.Name = "BackgroundImg";
+            this.BackgroundImg.Size = new System.Drawing.Size(730, 680);
+            this.BackgroundImg.TabIndex = 0;
+            this.BackgroundImg.TabStop = false;
             // 
             // imgPlayer
             // 
-            this.imgPlayer.Location = new System.Drawing.Point(259, 433);
+            this.imgPlayer.Location = new System.Drawing.Point(189, 570);
             this.imgPlayer.Name = "imgPlayer";
-            this.imgPlayer.Size = new System.Drawing.Size(60, 91);
+            this.imgPlayer.Size = new System.Drawing.Size(80, 110);
             this.imgPlayer.TabIndex = 1;
             this.imgPlayer.TabStop = false;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(12, 604);
+            this.btnStart.Location = new System.Drawing.Point(25, 771);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 2;
@@ -129,7 +137,7 @@
             // txtScore
             // 
             this.txtScore.AutoSize = true;
-            this.txtScore.Location = new System.Drawing.Point(13, 557);
+            this.txtScore.Location = new System.Drawing.Point(26, 724);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(47, 13);
             this.txtScore.TabIndex = 3;
@@ -137,25 +145,31 @@
             // 
             // imgLife1
             // 
-            this.imgLife1.Location = new System.Drawing.Point(169, 566);
+            this.imgLife1.Image = global::TryCatchIt.Properties.Resources.coracaoVida;
+            this.imgLife1.Location = new System.Drawing.Point(594, 686);
             this.imgLife1.Name = "imgLife1";
             this.imgLife1.Size = new System.Drawing.Size(27, 26);
+            this.imgLife1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLife1.TabIndex = 4;
             this.imgLife1.TabStop = false;
             // 
             // imgLife2
             // 
-            this.imgLife2.Location = new System.Drawing.Point(202, 566);
+            this.imgLife2.Image = global::TryCatchIt.Properties.Resources.coracaoVida;
+            this.imgLife2.Location = new System.Drawing.Point(627, 686);
             this.imgLife2.Name = "imgLife2";
             this.imgLife2.Size = new System.Drawing.Size(27, 26);
+            this.imgLife2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLife2.TabIndex = 5;
             this.imgLife2.TabStop = false;
             // 
             // imgLife3
             // 
-            this.imgLife3.Location = new System.Drawing.Point(235, 566);
+            this.imgLife3.Image = global::TryCatchIt.Properties.Resources.coracaoVida;
+            this.imgLife3.Location = new System.Drawing.Point(660, 686);
             this.imgLife3.Name = "imgLife3";
             this.imgLife3.Size = new System.Drawing.Size(27, 26);
+            this.imgLife3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLife3.TabIndex = 6;
             this.imgLife3.TabStop = false;
             // 
@@ -166,12 +180,12 @@
             // 
             // foodSpawTimer
             // 
-            this.foodSpawTimer.Interval = 1;
+            this.foodSpawTimer.Interval = 2;
             this.foodSpawTimer.Tick += new System.EventHandler(this.foodSpawTimer_Tick);
             // 
             // imgFood1
             // 
-            this.imgFood1.Location = new System.Drawing.Point(25, 11);
+            this.imgFood1.Location = new System.Drawing.Point(207, 80);
             this.imgFood1.Name = "imgFood1";
             this.imgFood1.Size = new System.Drawing.Size(35, 35);
             this.imgFood1.TabIndex = 7;
@@ -179,7 +193,7 @@
             // 
             // imgFood3
             // 
-            this.imgFood3.Location = new System.Drawing.Point(25, 93);
+            this.imgFood3.Location = new System.Drawing.Point(207, 121);
             this.imgFood3.Name = "imgFood3";
             this.imgFood3.Size = new System.Drawing.Size(35, 35);
             this.imgFood3.TabIndex = 8;
@@ -187,7 +201,7 @@
             // 
             // imgFood6
             // 
-            this.imgFood6.Location = new System.Drawing.Point(459, 215);
+            this.imgFood6.Location = new System.Drawing.Point(210, 331);
             this.imgFood6.Name = "imgFood6";
             this.imgFood6.Size = new System.Drawing.Size(35, 35);
             this.imgFood6.TabIndex = 9;
@@ -195,7 +209,7 @@
             // 
             // imgFood2
             // 
-            this.imgFood2.Location = new System.Drawing.Point(25, 52);
+            this.imgFood2.Location = new System.Drawing.Point(251, 413);
             this.imgFood2.Name = "imgFood2";
             this.imgFood2.Size = new System.Drawing.Size(35, 35);
             this.imgFood2.TabIndex = 10;
@@ -203,7 +217,7 @@
             // 
             // imgFood9
             // 
-            this.imgFood9.Location = new System.Drawing.Point(459, 338);
+            this.imgFood9.Location = new System.Drawing.Point(169, 290);
             this.imgFood9.Name = "imgFood9";
             this.imgFood9.Size = new System.Drawing.Size(35, 35);
             this.imgFood9.TabIndex = 11;
@@ -211,7 +225,7 @@
             // 
             // imgFood10
             // 
-            this.imgFood10.Location = new System.Drawing.Point(503, 10);
+            this.imgFood10.Location = new System.Drawing.Point(251, 79);
             this.imgFood10.Name = "imgFood10";
             this.imgFood10.Size = new System.Drawing.Size(35, 35);
             this.imgFood10.TabIndex = 12;
@@ -219,7 +233,7 @@
             // 
             // imgFood8
             // 
-            this.imgFood8.Location = new System.Drawing.Point(459, 297);
+            this.imgFood8.Location = new System.Drawing.Point(210, 290);
             this.imgFood8.Name = "imgFood8";
             this.imgFood8.Size = new System.Drawing.Size(35, 35);
             this.imgFood8.TabIndex = 13;
@@ -227,7 +241,7 @@
             // 
             // imgFood7
             // 
-            this.imgFood7.Location = new System.Drawing.Point(459, 256);
+            this.imgFood7.Location = new System.Drawing.Point(169, 331);
             this.imgFood7.Name = "imgFood7";
             this.imgFood7.Size = new System.Drawing.Size(35, 35);
             this.imgFood7.TabIndex = 14;
@@ -235,7 +249,7 @@
             // 
             // imgFood5
             // 
-            this.imgFood5.Location = new System.Drawing.Point(459, 174);
+            this.imgFood5.Location = new System.Drawing.Point(251, 331);
             this.imgFood5.Name = "imgFood5";
             this.imgFood5.Size = new System.Drawing.Size(35, 35);
             this.imgFood5.TabIndex = 15;
@@ -243,7 +257,8 @@
             // 
             // imgFood4
             // 
-            this.imgFood4.Location = new System.Drawing.Point(459, 133);
+            this.imgFood4.BackColor = System.Drawing.Color.Transparent;
+            this.imgFood4.Location = new System.Drawing.Point(251, 290);
             this.imgFood4.Name = "imgFood4";
             this.imgFood4.Size = new System.Drawing.Size(35, 35);
             this.imgFood4.TabIndex = 16;
@@ -251,7 +266,7 @@
             // 
             // imgFood11
             // 
-            this.imgFood11.Location = new System.Drawing.Point(503, 51);
+            this.imgFood11.Location = new System.Drawing.Point(251, 120);
             this.imgFood11.Name = "imgFood11";
             this.imgFood11.Size = new System.Drawing.Size(35, 35);
             this.imgFood11.TabIndex = 17;
@@ -259,7 +274,7 @@
             // 
             // imgFood12
             // 
-            this.imgFood12.Location = new System.Drawing.Point(503, 92);
+            this.imgFood12.Location = new System.Drawing.Point(251, 161);
             this.imgFood12.Name = "imgFood12";
             this.imgFood12.Size = new System.Drawing.Size(35, 35);
             this.imgFood12.TabIndex = 18;
@@ -267,7 +282,8 @@
             // 
             // imgFood13
             // 
-            this.imgFood13.Location = new System.Drawing.Point(503, 133);
+            this.imgFood13.BackColor = System.Drawing.Color.Transparent;
+            this.imgFood13.Location = new System.Drawing.Point(251, 202);
             this.imgFood13.Name = "imgFood13";
             this.imgFood13.Size = new System.Drawing.Size(35, 35);
             this.imgFood13.TabIndex = 19;
@@ -275,7 +291,7 @@
             // 
             // imgFood14
             // 
-            this.imgFood14.Location = new System.Drawing.Point(503, 174);
+            this.imgFood14.Location = new System.Drawing.Point(207, 167);
             this.imgFood14.Name = "imgFood14";
             this.imgFood14.Size = new System.Drawing.Size(35, 35);
             this.imgFood14.TabIndex = 20;
@@ -283,7 +299,7 @@
             // 
             // imgFood15
             // 
-            this.imgFood15.Location = new System.Drawing.Point(503, 215);
+            this.imgFood15.Location = new System.Drawing.Point(207, 208);
             this.imgFood15.Name = "imgFood15";
             this.imgFood15.Size = new System.Drawing.Size(35, 35);
             this.imgFood15.TabIndex = 21;
@@ -291,7 +307,7 @@
             // 
             // imgFood16
             // 
-            this.imgFood16.Location = new System.Drawing.Point(503, 256);
+            this.imgFood16.Location = new System.Drawing.Point(207, 249);
             this.imgFood16.Name = "imgFood16";
             this.imgFood16.Size = new System.Drawing.Size(35, 35);
             this.imgFood16.TabIndex = 22;
@@ -299,7 +315,7 @@
             // 
             // imgFood17
             // 
-            this.imgFood17.Location = new System.Drawing.Point(503, 297);
+            this.imgFood17.Location = new System.Drawing.Point(169, 372);
             this.imgFood17.Name = "imgFood17";
             this.imgFood17.Size = new System.Drawing.Size(35, 35);
             this.imgFood17.TabIndex = 23;
@@ -307,7 +323,7 @@
             // 
             // imgFood18
             // 
-            this.imgFood18.Location = new System.Drawing.Point(503, 338);
+            this.imgFood18.Location = new System.Drawing.Point(169, 413);
             this.imgFood18.Name = "imgFood18";
             this.imgFood18.Size = new System.Drawing.Size(35, 35);
             this.imgFood18.TabIndex = 24;
@@ -315,7 +331,7 @@
             // 
             // imgFood19
             // 
-            this.imgFood19.Location = new System.Drawing.Point(544, 10);
+            this.imgFood19.Location = new System.Drawing.Point(166, 83);
             this.imgFood19.Name = "imgFood19";
             this.imgFood19.Size = new System.Drawing.Size(35, 35);
             this.imgFood19.TabIndex = 25;
@@ -323,7 +339,7 @@
             // 
             // imgFood20
             // 
-            this.imgFood20.Location = new System.Drawing.Point(544, 51);
+            this.imgFood20.Location = new System.Drawing.Point(166, 125);
             this.imgFood20.Name = "imgFood20";
             this.imgFood20.Size = new System.Drawing.Size(35, 35);
             this.imgFood20.TabIndex = 26;
@@ -331,7 +347,7 @@
             // 
             // imgFood21
             // 
-            this.imgFood21.Location = new System.Drawing.Point(544, 92);
+            this.imgFood21.Location = new System.Drawing.Point(251, 372);
             this.imgFood21.Name = "imgFood21";
             this.imgFood21.Size = new System.Drawing.Size(35, 35);
             this.imgFood21.TabIndex = 27;
@@ -339,7 +355,7 @@
             // 
             // imgFood22
             // 
-            this.imgFood22.Location = new System.Drawing.Point(544, 133);
+            this.imgFood22.Location = new System.Drawing.Point(251, 249);
             this.imgFood22.Name = "imgFood22";
             this.imgFood22.Size = new System.Drawing.Size(35, 35);
             this.imgFood22.TabIndex = 28;
@@ -347,7 +363,7 @@
             // 
             // imgFood23
             // 
-            this.imgFood23.Location = new System.Drawing.Point(544, 174);
+            this.imgFood23.Location = new System.Drawing.Point(210, 372);
             this.imgFood23.Name = "imgFood23";
             this.imgFood23.Size = new System.Drawing.Size(35, 35);
             this.imgFood23.TabIndex = 29;
@@ -355,7 +371,7 @@
             // 
             // imgFood24
             // 
-            this.imgFood24.Location = new System.Drawing.Point(544, 215);
+            this.imgFood24.Location = new System.Drawing.Point(169, 166);
             this.imgFood24.Name = "imgFood24";
             this.imgFood24.Size = new System.Drawing.Size(35, 35);
             this.imgFood24.TabIndex = 30;
@@ -363,7 +379,7 @@
             // 
             // imgFood25
             // 
-            this.imgFood25.Location = new System.Drawing.Point(544, 257);
+            this.imgFood25.Location = new System.Drawing.Point(169, 208);
             this.imgFood25.Name = "imgFood25";
             this.imgFood25.Size = new System.Drawing.Size(35, 35);
             this.imgFood25.TabIndex = 31;
@@ -371,7 +387,7 @@
             // 
             // imgFood26
             // 
-            this.imgFood26.Location = new System.Drawing.Point(544, 297);
+            this.imgFood26.Location = new System.Drawing.Point(169, 248);
             this.imgFood26.Name = "imgFood26";
             this.imgFood26.Size = new System.Drawing.Size(35, 35);
             this.imgFood26.TabIndex = 32;
@@ -379,17 +395,76 @@
             // 
             // imgFood27
             // 
-            this.imgFood27.Location = new System.Drawing.Point(544, 338);
+            this.imgFood27.Location = new System.Drawing.Point(210, 413);
             this.imgFood27.Name = "imgFood27";
             this.imgFood27.Size = new System.Drawing.Size(35, 35);
             this.imgFood27.TabIndex = 33;
             this.imgFood27.TabStop = false;
             // 
+            // pbxHeigthRnd
+            // 
+            this.pbxHeigthRnd.Location = new System.Drawing.Point(0, -100);
+            this.pbxHeigthRnd.Name = "pbxHeigthRnd";
+            this.pbxHeigthRnd.Size = new System.Drawing.Size(591, 1);
+            this.pbxHeigthRnd.TabIndex = 34;
+            this.pbxHeigthRnd.TabStop = false;
+            // 
+            // txtLost
+            // 
+            this.txtLost.AutoSize = true;
+            this.txtLost.Location = new System.Drawing.Point(26, 746);
+            this.txtLost.Name = "txtLost";
+            this.txtLost.Size = new System.Drawing.Size(30, 13);
+            this.txtLost.TabIndex = 35;
+            this.txtLost.Text = "Lost:";
+            // 
+            // pn1
+            // 
+            this.pn1.Location = new System.Drawing.Point(2, -100);
+            this.pn1.Name = "pn1";
+            this.pn1.Size = new System.Drawing.Size(730, 100);
+            this.pn1.TabIndex = 36;
+            // 
+            // pn2
+            // 
+            this.pn2.Location = new System.Drawing.Point(2, -250);
+            this.pn2.Name = "pn2";
+            this.pn2.Size = new System.Drawing.Size(730, 100);
+            this.pn2.TabIndex = 37;
+            // 
+            // pn3
+            // 
+            this.pn3.Location = new System.Drawing.Point(2, -400);
+            this.pn3.Name = "pn3";
+            this.pn3.Size = new System.Drawing.Size(730, 100);
+            this.pn3.TabIndex = 38;
+            // 
+            // stopWatch
+            // 
+            this.stopWatch.Interval = 1000;
+            this.stopWatch.Tick += new System.EventHandler(this.stopWatch_Tick);
+            // 
+            // txtTime
+            // 
+            this.txtTime.AutoSize = true;
+            this.txtTime.Location = new System.Drawing.Point(355, 776);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(67, 13);
+            this.txtTime.TabIndex = 39;
+            this.txtTime.Text = "Time played:";
+            // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 692);
+            this.ClientSize = new System.Drawing.Size(734, 861);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.imgFood12);
+            this.Controls.Add(this.pn3);
+            this.Controls.Add(this.pn2);
+            this.Controls.Add(this.pn1);
+            this.Controls.Add(this.txtLost);
+            this.Controls.Add(this.pbxHeigthRnd);
             this.Controls.Add(this.imgFood27);
             this.Controls.Add(this.imgFood26);
             this.Controls.Add(this.imgFood25);
@@ -405,7 +480,6 @@
             this.Controls.Add(this.imgFood15);
             this.Controls.Add(this.imgFood14);
             this.Controls.Add(this.imgFood13);
-            this.Controls.Add(this.imgFood12);
             this.Controls.Add(this.imgFood11);
             this.Controls.Add(this.imgFood4);
             this.Controls.Add(this.imgFood5);
@@ -423,12 +497,13 @@
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.imgPlayer);
-            this.Controls.Add(this.Background);
+            this.Controls.Add(this.BackgroundImg);
             this.Name = "Frm_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Try Catch It";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_Main_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Frm_Main_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.Background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackgroundImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLife1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLife2)).EndInit();
@@ -460,6 +535,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgFood25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFood26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFood27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxHeigthRnd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +543,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox Background;
+        private System.Windows.Forms.PictureBox BackgroundImg;
         private System.Windows.Forms.PictureBox imgPlayer;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label txtScore;
@@ -503,6 +579,13 @@
         private System.Windows.Forms.PictureBox imgFood25;
         private System.Windows.Forms.PictureBox imgFood26;
         private System.Windows.Forms.PictureBox imgFood27;
+        private System.Windows.Forms.PictureBox pbxHeigthRnd;
+        private System.Windows.Forms.Label txtLost;
+        private System.Windows.Forms.Panel pn1;
+        private System.Windows.Forms.Panel pn2;
+        private System.Windows.Forms.Panel pn3;
+        private System.Windows.Forms.Timer stopWatch;
+        private System.Windows.Forms.Label txtTime;
     }
 }
 
