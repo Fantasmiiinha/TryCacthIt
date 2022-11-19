@@ -11,8 +11,6 @@ namespace TryCatchIt
     class Food
     {
         private PictureBox imgFood;
-        int heigth = 20;
-        int width = 20;
         int points;
         int speed;
         int type;

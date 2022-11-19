@@ -39,7 +39,10 @@ namespace TryCatchIt
             pbxEx4.Parent = BackgroundImg;
             pbxLife.Parent = BackgroundImg;
             pbxLife.Visible = false;
-
+            lbl1.Parent = BackgroundImg;
+            lbl2.Parent = BackgroundImg;
+            lbl3.Parent = BackgroundImg;
+            lbl4.Parent = BackgroundImg;
 
             Dao dao = new Dao();
             dao.OpenConnection();
@@ -205,6 +208,10 @@ namespace TryCatchIt
             pbxEx2.Visible = false;
             pbxEx3.Visible = false;
             pbxEx4.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
         }
 
         private void Frm_Main_KeyDown(object sender, KeyEventArgs e)
@@ -284,6 +291,14 @@ namespace TryCatchIt
             pbxEx2.Visible = true;
             pbxEx3.Visible = true;
             pbxEx4.Visible = true;
+            lbl1.Visible = true;
+            lbl2.Visible = true;
+            lbl3.Visible = true;
+            lbl4.Visible = true;
+
+            playerSpeed = 8;
+            foodSpeed = 3;
+            diffTick = 0;
         }
     }
 }

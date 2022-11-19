@@ -38,6 +38,10 @@
             this.pn3 = new System.Windows.Forms.Panel();
             this.DiffTimer = new System.Windows.Forms.Timer(this.components);
             this.txtScore = new System.Windows.Forms.Label();
+            this.pbxEx4 = new System.Windows.Forms.PictureBox();
+            this.pbxEx3 = new System.Windows.Forms.PictureBox();
+            this.pbxEx2 = new System.Windows.Forms.PictureBox();
+            this.pbxEx1 = new System.Windows.Forms.PictureBox();
             this.pbxGame2 = new System.Windows.Forms.PictureBox();
             this.pbxGame = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,10 +65,14 @@
             this.imgLife1 = new System.Windows.Forms.PictureBox();
             this.imgPlayer = new System.Windows.Forms.PictureBox();
             this.BackgroundImg = new System.Windows.Forms.PictureBox();
-            this.pbxEx1 = new System.Windows.Forms.PictureBox();
-            this.pbxEx2 = new System.Windows.Forms.PictureBox();
-            this.pbxEx3 = new System.Windows.Forms.PictureBox();
-            this.pbxEx4 = new System.Windows.Forms.PictureBox();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGame2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,10 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgLife1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStart
@@ -148,6 +152,50 @@
             this.txtScore.Size = new System.Drawing.Size(106, 25);
             this.txtScore.TabIndex = 42;
             // 
+            // pbxEx4
+            // 
+            this.pbxEx4.BackColor = System.Drawing.Color.Transparent;
+            this.pbxEx4.Image = global::TryCatchIt.Properties.Resources.comida4;
+            this.pbxEx4.Location = new System.Drawing.Point(652, 277);
+            this.pbxEx4.Name = "pbxEx4";
+            this.pbxEx4.Size = new System.Drawing.Size(50, 50);
+            this.pbxEx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEx4.TabIndex = 48;
+            this.pbxEx4.TabStop = false;
+            // 
+            // pbxEx3
+            // 
+            this.pbxEx3.BackColor = System.Drawing.Color.Transparent;
+            this.pbxEx3.Image = global::TryCatchIt.Properties.Resources.comida3;
+            this.pbxEx3.Location = new System.Drawing.Point(556, 277);
+            this.pbxEx3.Name = "pbxEx3";
+            this.pbxEx3.Size = new System.Drawing.Size(50, 50);
+            this.pbxEx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEx3.TabIndex = 47;
+            this.pbxEx3.TabStop = false;
+            // 
+            // pbxEx2
+            // 
+            this.pbxEx2.BackColor = System.Drawing.Color.Transparent;
+            this.pbxEx2.Image = global::TryCatchIt.Properties.Resources.comida2;
+            this.pbxEx2.Location = new System.Drawing.Point(140, 277);
+            this.pbxEx2.Name = "pbxEx2";
+            this.pbxEx2.Size = new System.Drawing.Size(50, 50);
+            this.pbxEx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEx2.TabIndex = 46;
+            this.pbxEx2.TabStop = false;
+            // 
+            // pbxEx1
+            // 
+            this.pbxEx1.BackColor = System.Drawing.Color.Transparent;
+            this.pbxEx1.Image = global::TryCatchIt.Properties.Resources.comida1;
+            this.pbxEx1.Location = new System.Drawing.Point(30, 277);
+            this.pbxEx1.Name = "pbxEx1";
+            this.pbxEx1.Size = new System.Drawing.Size(50, 50);
+            this.pbxEx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEx1.TabIndex = 45;
+            this.pbxEx1.TabStop = false;
+            // 
             // pbxGame2
             // 
             this.pbxGame2.BackColor = System.Drawing.Color.Transparent;
@@ -196,7 +244,7 @@
             this.imgFood12.BackColor = System.Drawing.Color.Transparent;
             this.imgFood12.Location = new System.Drawing.Point(100, 141);
             this.imgFood12.Name = "imgFood12";
-            this.imgFood12.Size = new System.Drawing.Size(35, 35);
+            this.imgFood12.Size = new System.Drawing.Size(50, 50);
             this.imgFood12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood12.TabIndex = 18;
             this.imgFood12.TabStop = false;
@@ -214,7 +262,7 @@
             this.imgFood13.BackColor = System.Drawing.Color.Transparent;
             this.imgFood13.Location = new System.Drawing.Point(100, 182);
             this.imgFood13.Name = "imgFood13";
-            this.imgFood13.Size = new System.Drawing.Size(35, 35);
+            this.imgFood13.Size = new System.Drawing.Size(50, 50);
             this.imgFood13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood13.TabIndex = 19;
             this.imgFood13.TabStop = false;
@@ -224,7 +272,7 @@
             this.imgFood11.BackColor = System.Drawing.Color.Transparent;
             this.imgFood11.Location = new System.Drawing.Point(59, 141);
             this.imgFood11.Name = "imgFood11";
-            this.imgFood11.Size = new System.Drawing.Size(35, 35);
+            this.imgFood11.Size = new System.Drawing.Size(50, 50);
             this.imgFood11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood11.TabIndex = 17;
             this.imgFood11.TabStop = false;
@@ -234,7 +282,7 @@
             this.imgFood4.BackColor = System.Drawing.Color.Transparent;
             this.imgFood4.Location = new System.Drawing.Point(100, 18);
             this.imgFood4.Name = "imgFood4";
-            this.imgFood4.Size = new System.Drawing.Size(35, 35);
+            this.imgFood4.Size = new System.Drawing.Size(50, 50);
             this.imgFood4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood4.TabIndex = 16;
             this.imgFood4.TabStop = false;
@@ -245,7 +293,7 @@
             this.imgFood5.Image = global::TryCatchIt.Properties.Resources.comida2;
             this.imgFood5.Location = new System.Drawing.Point(100, 59);
             this.imgFood5.Name = "imgFood5";
-            this.imgFood5.Size = new System.Drawing.Size(35, 35);
+            this.imgFood5.Size = new System.Drawing.Size(50, 50);
             this.imgFood5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood5.TabIndex = 15;
             this.imgFood5.TabStop = false;
@@ -256,7 +304,7 @@
             this.imgFood7.Image = global::TryCatchIt.Properties.Resources.comida4;
             this.imgFood7.Location = new System.Drawing.Point(18, 59);
             this.imgFood7.Name = "imgFood7";
-            this.imgFood7.Size = new System.Drawing.Size(35, 35);
+            this.imgFood7.Size = new System.Drawing.Size(50, 50);
             this.imgFood7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood7.TabIndex = 14;
             this.imgFood7.TabStop = false;
@@ -266,7 +314,7 @@
             this.imgFood8.BackColor = System.Drawing.Color.Transparent;
             this.imgFood8.Location = new System.Drawing.Point(59, 18);
             this.imgFood8.Name = "imgFood8";
-            this.imgFood8.Size = new System.Drawing.Size(35, 35);
+            this.imgFood8.Size = new System.Drawing.Size(50, 50);
             this.imgFood8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood8.TabIndex = 13;
             this.imgFood8.TabStop = false;
@@ -276,7 +324,7 @@
             this.imgFood10.BackColor = System.Drawing.Color.Transparent;
             this.imgFood10.Location = new System.Drawing.Point(652, 141);
             this.imgFood10.Name = "imgFood10";
-            this.imgFood10.Size = new System.Drawing.Size(35, 35);
+            this.imgFood10.Size = new System.Drawing.Size(50, 50);
             this.imgFood10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood10.TabIndex = 12;
             this.imgFood10.TabStop = false;
@@ -286,7 +334,7 @@
             this.imgFood9.BackColor = System.Drawing.Color.Transparent;
             this.imgFood9.Location = new System.Drawing.Point(18, 18);
             this.imgFood9.Name = "imgFood9";
-            this.imgFood9.Size = new System.Drawing.Size(35, 35);
+            this.imgFood9.Size = new System.Drawing.Size(50, 50);
             this.imgFood9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood9.TabIndex = 11;
             this.imgFood9.TabStop = false;
@@ -297,7 +345,7 @@
             this.imgFood2.Image = global::TryCatchIt.Properties.Resources.comida1;
             this.imgFood2.Location = new System.Drawing.Point(693, 141);
             this.imgFood2.Name = "imgFood2";
-            this.imgFood2.Size = new System.Drawing.Size(35, 35);
+            this.imgFood2.Size = new System.Drawing.Size(50, 50);
             this.imgFood2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood2.TabIndex = 10;
             this.imgFood2.TabStop = false;
@@ -308,7 +356,7 @@
             this.imgFood6.Image = global::TryCatchIt.Properties.Resources.comida3;
             this.imgFood6.Location = new System.Drawing.Point(59, 59);
             this.imgFood6.Name = "imgFood6";
-            this.imgFood6.Size = new System.Drawing.Size(35, 35);
+            this.imgFood6.Size = new System.Drawing.Size(50, 50);
             this.imgFood6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood6.TabIndex = 9;
             this.imgFood6.TabStop = false;
@@ -318,7 +366,7 @@
             this.imgFood3.BackColor = System.Drawing.Color.Transparent;
             this.imgFood3.Location = new System.Drawing.Point(15, 142);
             this.imgFood3.Name = "imgFood3";
-            this.imgFood3.Size = new System.Drawing.Size(35, 35);
+            this.imgFood3.Size = new System.Drawing.Size(50, 50);
             this.imgFood3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood3.TabIndex = 8;
             this.imgFood3.TabStop = false;
@@ -328,7 +376,7 @@
             this.imgFood1.BackColor = System.Drawing.Color.Transparent;
             this.imgFood1.Location = new System.Drawing.Point(608, 142);
             this.imgFood1.Name = "imgFood1";
-            this.imgFood1.Size = new System.Drawing.Size(35, 35);
+            this.imgFood1.Size = new System.Drawing.Size(50, 50);
             this.imgFood1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgFood1.TabIndex = 7;
             this.imgFood1.TabStop = false;
@@ -365,6 +413,7 @@
             // 
             // imgPlayer
             // 
+            this.imgPlayer.BackColor = System.Drawing.Color.Transparent;
             this.imgPlayer.ErrorImage = null;
             this.imgPlayer.Image = global::TryCatchIt.Properties.Resources.dog1;
             this.imgPlayer.Location = new System.Drawing.Point(332, 527);
@@ -377,61 +426,63 @@
             // BackgroundImg
             // 
             this.BackgroundImg.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImg.Image = global::TryCatchIt.Properties.Resources.fundo;
             this.BackgroundImg.Location = new System.Drawing.Point(2, 0);
             this.BackgroundImg.Name = "BackgroundImg";
             this.BackgroundImg.Size = new System.Drawing.Size(730, 680);
+            this.BackgroundImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImg.TabIndex = 0;
             this.BackgroundImg.TabStop = false;
             // 
-            // pbxEx1
+            // lbl1
             // 
-            this.pbxEx1.BackColor = System.Drawing.Color.Transparent;
-            this.pbxEx1.Image = global::TryCatchIt.Properties.Resources.comida1;
-            this.pbxEx1.Location = new System.Drawing.Point(35, 310);
-            this.pbxEx1.Name = "pbxEx1";
-            this.pbxEx1.Size = new System.Drawing.Size(35, 35);
-            this.pbxEx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEx1.TabIndex = 45;
-            this.pbxEx1.TabStop = false;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(28, 337);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(40, 23);
+            this.lbl1.TabIndex = 49;
+            this.lbl1.Text = "+10";
             // 
-            // pbxEx2
+            // lbl2
             // 
-            this.pbxEx2.BackColor = System.Drawing.Color.Transparent;
-            this.pbxEx2.Image = global::TryCatchIt.Properties.Resources.comida2;
-            this.pbxEx2.Location = new System.Drawing.Point(134, 310);
-            this.pbxEx2.Name = "pbxEx2";
-            this.pbxEx2.Size = new System.Drawing.Size(35, 35);
-            this.pbxEx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEx2.TabIndex = 46;
-            this.pbxEx2.TabStop = false;
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(136, 337);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(44, 23);
+            this.lbl2.TabIndex = 50;
+            this.lbl2.Text = "+20";
             // 
-            // pbxEx3
+            // lbl3
             // 
-            this.pbxEx3.BackColor = System.Drawing.Color.Transparent;
-            this.pbxEx3.Image = global::TryCatchIt.Properties.Resources.comida3;
-            this.pbxEx3.Location = new System.Drawing.Point(567, 310);
-            this.pbxEx3.Name = "pbxEx3";
-            this.pbxEx3.Size = new System.Drawing.Size(35, 35);
-            this.pbxEx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEx3.TabIndex = 47;
-            this.pbxEx3.TabStop = false;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Location = new System.Drawing.Point(552, 337);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(46, 23);
+            this.lbl3.TabIndex = 51;
+            this.lbl3.Text = "+5";
             // 
-            // pbxEx4
+            // lbl4
             // 
-            this.pbxEx4.BackColor = System.Drawing.Color.Transparent;
-            this.pbxEx4.Image = global::TryCatchIt.Properties.Resources.comida4;
-            this.pbxEx4.Location = new System.Drawing.Point(660, 310);
-            this.pbxEx4.Name = "pbxEx4";
-            this.pbxEx4.Size = new System.Drawing.Size(35, 35);
-            this.pbxEx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEx4.TabIndex = 48;
-            this.pbxEx4.TabStop = false;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.Location = new System.Drawing.Point(651, 337);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(51, 23);
+            this.lbl4.TabIndex = 52;
+            this.lbl4.Text = "+30";
             // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 861);
+            this.Controls.Add(this.lbl4);
+            this.Controls.Add(this.lbl3);
+            this.Controls.Add(this.lbl2);
+            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.pbxEx4);
             this.Controls.Add(this.pbxEx3);
             this.Controls.Add(this.pbxEx2);
@@ -469,6 +520,10 @@
             this.Text = "Try Catch It";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_Main_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Frm_Main_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGame2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -492,10 +547,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgLife1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEx4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -537,6 +588,10 @@
         private System.Windows.Forms.PictureBox pbxEx2;
         private System.Windows.Forms.PictureBox pbxEx3;
         private System.Windows.Forms.PictureBox pbxEx4;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lbl3;
+        private System.Windows.Forms.Label lbl4;
     }
 }
 
