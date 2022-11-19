@@ -31,10 +31,20 @@ D:\FESA\2 SEM\JogoWinFormErikFabricio\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe.config
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.pdb
-C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.AssemblyReference.cache
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.Frm_Main.resources
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.Properties.Resources.resources
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.GenerateResource.cache
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.CoreCompileInputs.cache
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.exe
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.pdb
+Z:\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe.config
+Z:\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.exe
+Z:\TryCatchIt\TryCatchIt\bin\Debug\TryCatchIt.pdb
+Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.AssemblyReference.cache
+Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.Frm_Main.resources
+Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.Properties.Resources.resources
+Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.GenerateResource.cache
+Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.CoreCompileInputs.cache
+Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.exe
+Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.pdb
+C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csprojAssemblyReference.cache

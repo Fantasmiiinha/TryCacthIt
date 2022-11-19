@@ -19,21 +19,39 @@ namespace TryCatchIt
         int lastNum = 0;
         int lastXSpawed = 0;
         int lifes = 3;
+        int diffTick = 0;
         bool movingLeft, movingRight;
         List<Food> foodList = new List<Food>();
         Random rnd = new Random();
         Configs cfg = new Configs();
+        bool lifeFalling = false;
 
         public Frm_Main()
         {
             InitializeComponent();
 
-            for (int i = 0; i < 15; i++)
+            imgPlayer.Parent = BackgroundImg;
+            pbxGame.Parent = BackgroundImg;
+            pbxGame2.Parent = BackgroundImg;
+            pbxEx1.Parent = BackgroundImg;
+            pbxEx2.Parent = BackgroundImg;
+            pbxEx3.Parent = BackgroundImg;
+            pbxEx4.Parent = BackgroundImg;
+            pbxLife.Parent = BackgroundImg;
+            pbxLife.Visible = false;
+
+
+            Dao dao = new Dao();
+            dao.OpenConnection();
+
+            for (int i = 0; i < 13; i++)
             {
                 PictureBox pbx = (PictureBox)this.Controls["imgFood" + (i + 1)];
-                foodList.Add(new Food(pbx, rnd.Next(1, 3)));
+                pbx.Parent = BackgroundImg;
+                foodList.Add(new Food(pbx, rnd.Next(1, 5)));
             }
 
+            RandomSpawn();
         }
 
         private void foodSpawTimer_Tick(object sender, EventArgs e)
@@ -43,6 +61,12 @@ namespace TryCatchIt
                 PictureBox pbx = f.getPictureBox();
 
                 pbx.Location = new Point(pbx.Location.X, pbx.Location.Y + foodSpeed);
+            }
+
+            if(lifeFalling)
+            {
+                pbxLife.Visible = true;
+                pbxLife.Location = new Point(pbxLife.Location.X, pbxLife.Location.Y + 2);
             }
 
             foreach (Food f in foodList)
@@ -58,7 +82,7 @@ namespace TryCatchIt
                 {
                     RePositionFood(pbx);
                     points += f.getPoints();
-                    txtScore.Text = "SCORE: " + points;
+                    txtScore.Text = "" + points;
                 }
 
                 if (pbx.Location.Y > 645)
@@ -67,6 +91,21 @@ namespace TryCatchIt
                     RePositionFood(pbx);
                 }
 
+                if(imgPlayer.Bounds.IntersectsWith(pbxLife.Bounds))
+                {
+                    lifes++;
+                    lifeFalling = false;
+                    pbxLife.Location = new Point(387, 0);
+                    pbxLife.Visible = false;
+
+                    if(imgLife2.Visible == false)
+                    {
+                        imgLife2.Visible = true;
+                    } else if(imgLife3.Visible == false)
+                    {
+                        imgLife3.Visible = true;
+                    }
+                }
             }
 
             if(lifes == 2)
@@ -78,6 +117,16 @@ namespace TryCatchIt
             } else if (lifes == 0)
             {
                 GameOver();
+            }
+        }
+        private void RandomSpawn()
+        {
+            lastXSpawed = rnd.Next(3, 695);
+            foreach(Food f in foodList)
+            {
+                PictureBox pbx = f.getPictureBox();
+                RePositionFood(pbx);
+                pbx.Location = new Point(pbx.Location.X,  pbx.Location.Y - rnd.Next(1, 100)); 
             }
         }
 
@@ -131,23 +180,15 @@ namespace TryCatchIt
 
         private void stopWatch_Tick(object sender, EventArgs e)
         {
-           /* txtTime.Text = "Speed: " + foodSpeed;
-
-            if (gameTime == 20 && foodSpeed + 1 < 5) {
-                foodSpeed = 3;
-            }
-
-            if (gameTime == 40 && foodSpeed + 1 < 5)
+            diffTick++;
+            if(diffTick%3 == 0)
             {
-                foodSpeed = 4;
-            }
-
-            if (foodSpeed == 4)
+                lifeFalling = true;
+            }else if(diffTick%4 == 0)
             {
                 playerSpeed += 2;
+                foodSpeed++;
             }
-
-            gameTime++;*/
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -155,7 +196,15 @@ namespace TryCatchIt
             btnStart.Enabled = false;
             gameTimer.Enabled = true;
             foodSpawTimer.Enabled = true;
-            stopWatch.Enabled = true;
+            DiffTimer.Enabled = true;
+
+            btnStart.Visible = false;
+            pbxGame.Visible = false;
+            pbxGame2.Visible = false;
+            pbxEx1.Visible = false;
+            pbxEx2.Visible = false;
+            pbxEx3.Visible = false;
+            pbxEx4.Visible = false;
         }
 
         private void Frm_Main_KeyDown(object sender, KeyEventArgs e)
@@ -170,17 +219,31 @@ namespace TryCatchIt
             }
             if (e.KeyCode == Keys.Space && movingLeft)
             {
-                for(int i = 1; i < 101; i++)
+                if (imgPlayer.Location.X - 100 < 0)
                 {
-                    imgPlayer.Location = new Point(imgPlayer.Location.X - 1, imgPlayer.Location.Y); 
+                    imgPlayer.Location = new Point(20, imgPlayer.Location.Y);
+                }
+                else
+                {
+                    for (int i = 1; i < 101; i++)
+                    {
+                        imgPlayer.Location = new Point(imgPlayer.Location.X - 1, imgPlayer.Location.Y);
+                    }
                 }
                 
             } 
             else if (e.KeyCode == Keys.Space && movingRight)
             {
-                for(int i = 1; i < 101; i++)
+                if (imgPlayer.Location.X + 100 > 680)
                 {
-                    imgPlayer.Location = new Point(imgPlayer.Location.X + 1, imgPlayer.Location.Y); 
+                    imgPlayer.Location = new Point(600, imgPlayer.Location.Y);
+                }
+                else
+                {
+                    for (int i = 1; i < 101; i++)
+                    {
+                        imgPlayer.Location = new Point(imgPlayer.Location.X + 1, imgPlayer.Location.Y);
+                    }
                 }
                 
             }
@@ -211,6 +274,16 @@ namespace TryCatchIt
                 "Score: " + points);
 
             points = 0;
+            RandomSpawn();
+            imgPlayer.Location = new Point(32, 527);
+
+            btnStart.Visible = true;
+            pbxGame.Visible = true;
+            pbxGame2.Visible = true;
+            pbxEx1.Visible = true;
+            pbxEx2.Visible = true;
+            pbxEx3.Visible = true;
+            pbxEx4.Visible = true;
         }
     }
 }

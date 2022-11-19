@@ -29,16 +29,19 @@ namespace TryCatchIt
             {
                 case 1:
                     this.points = 10;
-                    imgFood.Image = Image.FromFile("D:\\FESA\\2 SEM\\JogoWinFormErikFabricio\\TryCatchIt\\TryCatchIt\\bife.png.gif");
+                    imgFood.Image = (Image)TryCatchIt.Properties.Resources.comida1;
                     break;
                 case 2:
+                    imgFood.Image = (Image)TryCatchIt.Properties.Resources.comida2;
                     this.points = 30;
                     break;
                 case 3:
-                    this.points = -20;
+                    imgFood.Image = (Image)TryCatchIt.Properties.Resources.comida3;
+                    this.points = 20;
                     break;
                 case 4:
                     this.points = 5;
+                    imgFood.Image = (Image)TryCatchIt.Properties.Resources.comida4;
                     break;
             }
         }
