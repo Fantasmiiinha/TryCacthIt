@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace TryCatchIt
 {
@@ -14,7 +15,6 @@ namespace TryCatchIt
     {
         int playerSpeed = 8;
         int foodSpeed = 3;
-        int gameTime = 0;
         int points = 0;
         int lastNum = 0;
         int lastXSpawed = 0;
@@ -25,6 +25,7 @@ namespace TryCatchIt
         Random rnd = new Random();
         Configs cfg = new Configs();
         bool lifeFalling = false;
+        SoundPlayer radio = new SoundPlayer();
 
         public Frm_Main()
         {
@@ -43,6 +44,7 @@ namespace TryCatchIt
             lbl2.Parent = BackgroundImg;
             lbl3.Parent = BackgroundImg;
             lbl4.Parent = BackgroundImg;
+            btnStart.Parent = BackgroundImg;
 
             Dao dao = new Dao();
             dao.OpenConnection();
@@ -55,6 +57,9 @@ namespace TryCatchIt
             }
 
             RandomSpawn();
+
+            radio.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\ost2.wav";
+            radio.PlayLooping();
         }
 
         private void foodSpawTimer_Tick(object sender, EventArgs e)
@@ -117,7 +122,7 @@ namespace TryCatchIt
             } else if (lifes == 1)
             {
                 imgLife2.Visible = false;
-            } else if (lifes == 0)
+            } else if (lifes < 1)
             {
                 GameOver();
             }
@@ -194,34 +199,16 @@ namespace TryCatchIt
             }
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            btnStart.Enabled = false;
-            gameTimer.Enabled = true;
-            foodSpawTimer.Enabled = true;
-            DiffTimer.Enabled = true;
-
-            btnStart.Visible = false;
-            pbxGame.Visible = false;
-            pbxGame2.Visible = false;
-            pbxEx1.Visible = false;
-            pbxEx2.Visible = false;
-            pbxEx3.Visible = false;
-            pbxEx4.Visible = false;
-            lbl1.Visible = false;
-            lbl2.Visible = false;
-            lbl3.Visible = false;
-            lbl4.Visible = false;
-        }
-
         private void Frm_Main_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
+                imgPlayer.Image = (Image)TryCatchIt.Properties.Resources.dog1flip;
                 movingLeft = true;
             }
             if (e.KeyCode == Keys.Right)
             {
+                imgPlayer.Image = (Image)TryCatchIt.Properties.Resources.dog1;
                 movingRight = true;
             }
             if (e.KeyCode == Keys.Space && movingLeft)
@@ -268,6 +255,37 @@ namespace TryCatchIt
             }
         }
 
+        private void btnStart_Click_1(object sender, EventArgs e)
+        {
+            btnStart.Enabled = false;
+            gameTimer.Enabled = true;
+            foodSpawTimer.Enabled = true;
+            DiffTimer.Enabled = true;
+            BackgroundImg.Image = (Image)TryCatchIt.Properties.Resources.fundo1;
+
+            btnStart.Visible = false;
+            pbxGame.Visible = false;
+            pbxGame2.Visible = false;
+            pbxEx1.Visible = false;
+            pbxEx2.Visible = false;
+            pbxEx3.Visible = false;
+            pbxEx4.Visible = false;
+            lbl1.Visible = false;
+            lbl2.Visible = false;
+            lbl3.Visible = false;
+            lbl4.Visible = false;
+        }
+
+        private void btnStart_MouseEnter(object sender, EventArgs e)
+        {
+            btnStart.Image = (Image)TryCatchIt.Properties.Resources.start21;
+        }
+
+        private void btnStart_MouseLeave(object sender, EventArgs e)
+        {
+            btnStart.Image = (Image)TryCatchIt.Properties.Resources.start1;
+        }
+
         private void GameOver()
         {
             gameTimer.Enabled = false;
@@ -277,12 +295,16 @@ namespace TryCatchIt
             imgLife2.Visible = true;
             imgLife3.Visible = true;
 
+            gameTimer.Enabled = false;
+            foodSpawTimer.Enabled = false;
+            DiffTimer.Enabled = false;
+
             MessageBox.Show("Você perdeu \n" +
                 "Score: " + points);
 
             points = 0;
             RandomSpawn();
-            imgPlayer.Location = new Point(32, 527);
+            imgPlayer.Location = new Point(322, 527);
 
             btnStart.Visible = true;
             pbxGame.Visible = true;
@@ -295,6 +317,7 @@ namespace TryCatchIt
             lbl2.Visible = true;
             lbl3.Visible = true;
             lbl4.Visible = true;
+            BackgroundImg.Image = (Image)TryCatchIt.Properties.Resources.fundo___Copia;
 
             playerSpeed = 8;
             foodSpeed = 3;

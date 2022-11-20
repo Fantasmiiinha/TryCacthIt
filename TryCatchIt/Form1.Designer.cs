@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main));
-            this.btnStart = new System.Windows.Forms.Button();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.foodSpawTimer = new System.Windows.Forms.Timer(this.components);
             this.pn1 = new System.Windows.Forms.Panel();
@@ -38,6 +37,10 @@
             this.pn3 = new System.Windows.Forms.Panel();
             this.DiffTimer = new System.Windows.Forms.Timer(this.components);
             this.txtScore = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
             this.pbxEx4 = new System.Windows.Forms.PictureBox();
             this.pbxEx3 = new System.Windows.Forms.PictureBox();
             this.pbxEx2 = new System.Windows.Forms.PictureBox();
@@ -65,10 +68,8 @@
             this.imgLife1 = new System.Windows.Forms.PictureBox();
             this.imgPlayer = new System.Windows.Forms.PictureBox();
             this.BackgroundImg = new System.Windows.Forms.PictureBox();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.lbl2 = new System.Windows.Forms.Label();
-            this.lbl3 = new System.Windows.Forms.Label();
-            this.lbl4 = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEx4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEx3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEx2)).BeginInit();
@@ -96,17 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgLife1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnStart)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(280, 287);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(189, 73);
-            this.btnStart.TabIndex = 2;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // gameTimer
             // 
@@ -146,11 +138,52 @@
             // 
             // txtScore
             // 
-            this.txtScore.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(136, 721);
+            this.txtScore.BackColor = System.Drawing.Color.Transparent;
+            this.txtScore.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.Location = new System.Drawing.Point(194, 739);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(106, 25);
             this.txtScore.TabIndex = 42;
+            // 
+            // lbl1
+            // 
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(28, 337);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(40, 23);
+            this.lbl1.TabIndex = 49;
+            this.lbl1.Text = "+10";
+            // 
+            // lbl2
+            // 
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(136, 337);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(44, 23);
+            this.lbl2.TabIndex = 50;
+            this.lbl2.Text = "+20";
+            // 
+            // lbl3
+            // 
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Location = new System.Drawing.Point(552, 337);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(46, 23);
+            this.lbl3.TabIndex = 51;
+            this.lbl3.Text = "+5";
+            // 
+            // lbl4
+            // 
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.Location = new System.Drawing.Point(651, 337);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(51, 23);
+            this.lbl4.TabIndex = 52;
+            this.lbl4.Text = "+30";
             // 
             // pbxEx4
             // 
@@ -200,9 +233,9 @@
             // 
             this.pbxGame2.BackColor = System.Drawing.Color.Transparent;
             this.pbxGame2.Image = global::TryCatchIt.Properties.Resources.fonte2;
-            this.pbxGame2.Location = new System.Drawing.Point(238, 387);
+            this.pbxGame2.Location = new System.Drawing.Point(239, 397);
             this.pbxGame2.Name = "pbxGame2";
-            this.pbxGame2.Size = new System.Drawing.Size(262, 100);
+            this.pbxGame2.Size = new System.Drawing.Size(292, 134);
             this.pbxGame2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxGame2.TabIndex = 44;
             this.pbxGame2.TabStop = false;
@@ -220,10 +253,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::TryCatchIt.Properties.Resources.fonte1;
             this.pictureBox1.Location = new System.Drawing.Point(2, 686);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
@@ -374,7 +408,7 @@
             // imgFood1
             // 
             this.imgFood1.BackColor = System.Drawing.Color.Transparent;
-            this.imgFood1.Location = new System.Drawing.Point(608, 142);
+            this.imgFood1.Location = new System.Drawing.Point(596, 142);
             this.imgFood1.Name = "imgFood1";
             this.imgFood1.Size = new System.Drawing.Size(50, 50);
             this.imgFood1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -383,6 +417,7 @@
             // 
             // imgLife3
             // 
+            this.imgLife3.BackColor = System.Drawing.Color.Transparent;
             this.imgLife3.Image = ((System.Drawing.Image)(resources.GetObject("imgLife3.Image")));
             this.imgLife3.Location = new System.Drawing.Point(640, 700);
             this.imgLife3.Name = "imgLife3";
@@ -393,6 +428,7 @@
             // 
             // imgLife2
             // 
+            this.imgLife2.BackColor = System.Drawing.Color.Transparent;
             this.imgLife2.Image = ((System.Drawing.Image)(resources.GetObject("imgLife2.Image")));
             this.imgLife2.Location = new System.Drawing.Point(571, 700);
             this.imgLife2.Name = "imgLife2";
@@ -403,6 +439,7 @@
             // 
             // imgLife1
             // 
+            this.imgLife1.BackColor = System.Drawing.Color.Transparent;
             this.imgLife1.Image = ((System.Drawing.Image)(resources.GetObject("imgLife1.Image")));
             this.imgLife1.Location = new System.Drawing.Point(502, 700);
             this.imgLife1.Name = "imgLife1";
@@ -426,59 +463,47 @@
             // BackgroundImg
             // 
             this.BackgroundImg.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImg.Image = global::TryCatchIt.Properties.Resources.fundo;
-            this.BackgroundImg.Location = new System.Drawing.Point(2, 0);
+            this.BackgroundImg.Image = global::TryCatchIt.Properties.Resources.fundo___Copia;
+            this.BackgroundImg.Location = new System.Drawing.Point(-5, 0);
             this.BackgroundImg.Name = "BackgroundImg";
-            this.BackgroundImg.Size = new System.Drawing.Size(730, 680);
+            this.BackgroundImg.Size = new System.Drawing.Size(748, 680);
             this.BackgroundImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImg.TabIndex = 0;
             this.BackgroundImg.TabStop = false;
             // 
-            // lbl1
+            // btnStart
             // 
-            this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(28, 337);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(40, 23);
-            this.lbl1.TabIndex = 49;
-            this.lbl1.Text = "+10";
+            this.btnStart.BackColor = System.Drawing.Color.Transparent;
+            this.btnStart.Image = global::TryCatchIt.Properties.Resources.start1;
+            this.btnStart.Location = new System.Drawing.Point(332, 262);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(120, 129);
+            this.btnStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnStart.TabIndex = 53;
+            this.btnStart.TabStop = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click_1);
+            this.btnStart.MouseEnter += new System.EventHandler(this.btnStart_MouseEnter);
+            this.btnStart.MouseLeave += new System.EventHandler(this.btnStart_MouseLeave);
             // 
-            // lbl2
+            // label1
             // 
-            this.lbl2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl2.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(136, 337);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(44, 23);
-            this.lbl2.TabIndex = 50;
-            this.lbl2.Text = "+20";
-            // 
-            // lbl3
-            // 
-            this.lbl3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl3.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(552, 337);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(46, 23);
-            this.lbl3.TabIndex = 51;
-            this.lbl3.Text = "+5";
-            // 
-            // lbl4
-            // 
-            this.lbl4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl4.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.Location = new System.Drawing.Point(651, 337);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(51, 23);
-            this.lbl4.TabIndex = 52;
-            this.lbl4.Text = "+30";
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(279, 764);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(443, 88);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Erik Foramiglio Vieira  -> Desenvolvedor \r\nFabrício Santos Gonçalves -> Desenvolv" +
+    "edor\r\nCarolina Venturin Pidone -> Designer\r\n";
             // 
             // Frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::TryCatchIt.Properties.Resources.display;
             this.ClientSize = new System.Drawing.Size(734, 861);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
@@ -512,7 +537,6 @@
             this.Controls.Add(this.imgLife3);
             this.Controls.Add(this.imgLife2);
             this.Controls.Add(this.imgLife1);
-            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.imgPlayer);
             this.Controls.Add(this.BackgroundImg);
             this.Name = "Frm_Main";
@@ -547,6 +571,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgLife1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnStart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -555,7 +580,6 @@
 
         private System.Windows.Forms.PictureBox BackgroundImg;
         private System.Windows.Forms.PictureBox imgPlayer;
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.PictureBox imgLife1;
         private System.Windows.Forms.PictureBox imgLife2;
         private System.Windows.Forms.PictureBox imgLife3;
@@ -592,6 +616,8 @@
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.PictureBox btnStart;
+        private System.Windows.Forms.Label label1;
     }
 }
 

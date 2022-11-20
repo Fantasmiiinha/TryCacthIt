@@ -48,3 +48,4 @@ Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csproj.CoreCompileInputs.cache
 Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.exe
 Z:\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.pdb
 C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\obj\Debug\TryCatchIt.csprojAssemblyReference.cache
+C:\Users\erikf\OneDrive\Área de Trabalho\Materia Facul\Sem2\Alg2\Projetos do Git\TryCatchIt\TryCatchIt\bin\Debug\ost2.wav

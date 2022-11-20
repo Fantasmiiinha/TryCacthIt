@@ -116,5 +116,24 @@
   <ItemGroup>
     <None Include="Resources\fundo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\display.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ost2.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\dog2flip.png" />
+    <None Include="Resources\dog1flip.png" />
+    <None Include="Resources\start21.png" />
+    <None Include="Resources\start2.png" />
+    <None Include="Resources\start1.png" />
+    <None Include="Resources\display2.png" />
+    <None Include="Resources\dog2.png" />
+    <None Include="Resources\fundo_-_Copia.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
